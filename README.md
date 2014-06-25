@@ -13,6 +13,13 @@ This is a Ember application showing shop items retrieved from a Rails backend.
 
 ## Installation
 
+  cd frontend
+  npm install
+  bower install
+  ember server
+
+Open a browser and navigate to [http://localhost:4200](http://localhost:4200).
+
 
 ## Tests
 
