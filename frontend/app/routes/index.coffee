@@ -1,7 +1,7 @@
 `import Ember from 'ember';`
 
 IndexRoute = Ember.Route.extend
-  beforeModel: ->
+  redirect: ->
     @transitionTo 'products'
 
 `export default IndexRoute;`
