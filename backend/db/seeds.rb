@@ -12,10 +12,10 @@ Product.destroy_all
   Product.new.tap do |product|
     product.title = Faker::Lorem.word
     product.description = Faker::Lorem.paragraphs.join('\n')
-    product.amount = 10
-    product.image_url = 'http://placehold.it/320x150'
-    product.rating = 4
-    product.review_count = 16
+    product.amount = rand(0.00..250.00).round(2)
+    product.image_url = 'http://lorempixel.com/320/150/food/%d' % rand(1..10)
+    product.rating = rand(0..5)
+    product.review_count = rand(0..30)
 
     product.save
   end
