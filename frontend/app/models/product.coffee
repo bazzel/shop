@@ -7,9 +7,11 @@ Product = DS.Model.extend
   smallImageUrl: DS.attr()
   largeImageUrl: DS.attr()
   rating: DS.attr()
-  reviewCount: DS.attr()
   reviews: DS.hasMany('review',
     async: yes
   )
+  reviewCount: (->
+    @get('reviews.length')
+  ).property('reviews.length')
 
 `export default Product;`
