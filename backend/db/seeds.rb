@@ -20,6 +20,14 @@ Product.destroy_all
     product.rating = rand(0..5)
     product.review_count = rand(0..30)
 
+    rand(0..10).times do
+      product.reviews << Review.new.tap do |review|
+        review.description = Faker::Lorem.paragraphs.join('\n')
+        review.rating = rand(0..5)
+        review.user = Faker::Name.name
+      end
+    end
+
     product.save
   end
 

@@ -1,4 +1,6 @@
 class ProductSerializer < ActiveModel::Serializer
+  embed :ids
+
   attributes :id,
     :title,
     :description,
@@ -7,4 +9,5 @@ class ProductSerializer < ActiveModel::Serializer
     :large_image_url,
     :rating,
     :review_count
+  has_many :reviews
 end
