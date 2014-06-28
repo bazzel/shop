@@ -13,7 +13,10 @@ Product.destroy_all
     product.title = Faker::Lorem.word
     product.description = Faker::Lorem.paragraphs.join('\n')
     product.amount = rand(0.00..250.00).round(2)
-    product.image_url = 'http://lorempixel.com/320/150/food/%d' % rand(1..10)
+    image_id = rand(1..10)
+
+    product.small_image_url = 'http://lorempixel.com/320/150/food/%d' % image_id
+    product.large_image_url = 'http://lorempixel.com/800/300/food/%d' % image_id
     product.rating = rand(0..5)
     product.review_count = rand(0..30)
 

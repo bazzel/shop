@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20140627062634) do
   create_table "products", force: true do |t|
     t.string   "title"
     t.string   "description"
-    t.decimal  "amount",       precision: 8, scale: 2
-    t.string   "image_url"
+    t.decimal  "amount",          precision: 8, scale: 2
+    t.string   "small_image_url"
+    t.string   "large_image_url"
     t.integer  "rating"
     t.integer  "review_count"
     t.datetime "created_at"

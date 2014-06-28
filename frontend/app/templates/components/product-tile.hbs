@@ -1,9 +1,9 @@
 <div class="col-sm-4 col-lg-4 col-md-4">
   <div class="thumbnail">
-    <img {{bindAttr src=product.imageUrl}} alt="">
+    <img {{bindAttr src=product.smallImageUrl}} alt="">
     <div class="caption">
       <h4 class="pull-right">${{product.amount}}</h4>
-      <h4><a href="#">{{product.title}}</a>
+      <h4>{{#link-to 'product' product}}{{product.title}}{{/link-to}}</a>
       </h4>
       <p>{{product.description}}</p>
     </div>

@@ -4,7 +4,8 @@ Product = DS.Model.extend
   title: DS.attr()
   description: DS.attr()
   amount: DS.attr()
-  imageUrl: DS.attr()
+  smallImageUrl: DS.attr()
+  largeImageUrl: DS.attr()
   rating: DS.attr()
   reviewCount: DS.attr()
 

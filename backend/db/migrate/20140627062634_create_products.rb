@@ -4,7 +4,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.decimal :amount, precision: 8, scale: 2
-      t.string :image_url
+      t.string :small_image_url
+      t.string :large_image_url
       t.integer :rating
       t.integer :review_count
 
