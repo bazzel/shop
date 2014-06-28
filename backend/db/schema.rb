@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140628065956) do
+ActiveRecord::Schema.define(version: 20140628074246) do
 
   create_table "products", force: true do |t|
     t.string   "title"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20140628065956) do
     t.string   "small_image_url"
     t.string   "large_image_url"
     t.integer  "rating"
-    t.integer  "review_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

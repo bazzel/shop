@@ -18,13 +18,13 @@ Product.destroy_all
     product.small_image_url = 'http://lorempixel.com/320/150/food/%d' % image_id
     product.large_image_url = 'http://lorempixel.com/800/300/food/%d' % image_id
     product.rating = rand(0..5)
-    product.review_count = rand(0..30)
 
     rand(0..10).times do
       product.reviews << Review.new.tap do |review|
         review.description = Faker::Lorem.paragraphs.join('\n')
         review.rating = rand(0..5)
         review.user = Faker::Name.name
+        review.created_at = rand(0..100).days.ago
       end
     end
 

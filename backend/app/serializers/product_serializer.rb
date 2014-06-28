@@ -7,7 +7,6 @@ class ProductSerializer < ActiveModel::Serializer
     :amount,
     :small_image_url,
     :large_image_url,
-    :rating,
-    :review_count
+    :rating
   has_many :reviews
 end
