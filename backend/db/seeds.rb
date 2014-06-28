@@ -17,7 +17,6 @@ Product.destroy_all
 
     product.small_image_url = 'http://lorempixel.com/320/150/food/%d' % image_id
     product.large_image_url = 'http://lorempixel.com/800/300/food/%d' % image_id
-    product.rating = rand(0..5)
 
     rand(0..10).times do
       product.reviews << Review.new.tap do |review|
