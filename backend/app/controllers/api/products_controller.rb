@@ -2,7 +2,7 @@ class Api::ProductsController < ApplicationController
   respond_to :json
 
   def index
-    render json: Product.all
+    render json: Product.includes(:reviews)
   end
 
   def show
