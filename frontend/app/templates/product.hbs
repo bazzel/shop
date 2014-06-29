@@ -21,11 +21,7 @@
       <div class="ratings">
         <p class="pull-right">{{reviewCount}} reviews</p>
         <p>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star-empty"></span>
+        {{star-rating starCount=rating}}
         {{rating}} stars
         </p>
       </div>
@@ -41,11 +37,7 @@
         <hr>
         <div class="row">
           <div class="col-md-12">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
+            {{star-rating starCount=rating}}
             {{user}}
             <span class="pull-right">{{createdAt}} (x days ago)</span>
             <p>{{description}}</p>

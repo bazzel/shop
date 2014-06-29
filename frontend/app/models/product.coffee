@@ -21,6 +21,9 @@ Product = DS.Model.extend
   rating: (->
     reviews = @get('reviews')
     count = reviews.get('length')
+
+    return 0 if count is 0
+
     sum = 0
 
     reviews.forEach (review) ->

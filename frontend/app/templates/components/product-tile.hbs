@@ -10,11 +10,7 @@
     <div class="ratings">
       <p class="pull-right">{{product.reviewCount}} reviews</p>
       <p>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
+        {{star-rating starCount=product.rating}}
       </p>
     </div>
   </div>
