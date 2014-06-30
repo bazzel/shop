@@ -39,7 +39,7 @@
           <div class="col-md-12">
             {{star-rating starCount=rating}}
             {{user}}
-            <span class="pull-right">{{createdAt}} (x days ago)</span>
+            <span class="pull-right">{{time-ago-in-words createdAt}}</span>
             <p>{{description}}</p>
           </div>
         </div>

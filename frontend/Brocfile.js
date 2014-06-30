@@ -16,6 +16,11 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+
+// Moment:
+app.import('vendor/moment/moment.js');
+
+// Bootstrap:
 app.import('vendor/bootstrap/dist/css/bootstrap.css');
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
 
@@ -27,5 +32,6 @@ var extraAssets = pickFiles('vendor/bootstrap/dist/fonts', {
   files: ['**/*'],
   destDir: '/fonts'
 });
+// End Bootstrap
 
 module.exports = mergeTrees([app.toTree(), extraAssets]);
