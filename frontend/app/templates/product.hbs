@@ -29,20 +29,53 @@
 
     <div class="well">
 
-      <div class="text-right">
-        <a class="btn btn-success">Leave a Review</a>
-      </div>
+      {{#if isAddingReview}}
+      <form {{action 'createReview' on='submit'}} role='form'>
+            <div class="form-group">
+              <label for="new-user">Name</label>
+              {{input value=newUser id='new-user' class='form-control' placeholder='name'}}
+            </div>
+
+            <div class="form-group">
+              <label for="new-rating">Rating</label>
+              <div class="input-group">
+                {{ input id="new-rating" type="range" min="0" max="5" step="1" value=newRating }}
+                <div class="input-group-addon">{{newRating}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-description">Review</label>
+              {{textarea id="new-description" class="form-control" value=newDescription}}
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="button1id"></label>
+              <div class="controls">
+                <button class="btn btn-primary" type='submit'>Submit the review</button>
+                <button class="btn btn-default" {{action 'toggleAdding'}}>Cancel</button>
+              </div>
+            </div>
+
+        </form>
+      {{else}}
+        <div class="text-right">
+          <a class="btn btn-success" {{action 'toggleAdding'}}>Leave a Review</a>
+        </div>
+      {{/if}}
+
+
 
       {{#each reviews}}
-        <hr>
-        <div class="row">
-          <div class="col-md-12">
-            {{star-rating starCount=rating}}
-            {{user}}
-            <span class="pull-right">{{time-ago-in-words createdAt}}</span>
-            <p>{{description}}</p>
-          </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          {{star-rating starCount=rating}}
+          {{user}}
+          <span class="pull-right">{{time-ago-in-words createdAt}}</span>
+          <p>{{description}}</p>
         </div>
+      </div>
       {{/each}}
     </div>
   </div>

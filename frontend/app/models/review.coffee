@@ -5,6 +5,7 @@ Review = DS.Model.extend
   rating: DS.attr()
   user: DS.attr()
   createdAt: DS.attr()
+  product: DS.belongsTo('product')
 
 
 `export default Review;`

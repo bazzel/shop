@@ -20,6 +20,13 @@ var app = new EmberApp();
 // Moment:
 app.import('vendor/moment/moment.js');
 
+// rails-csrf:
+app.import('vendor/rails-csrf/dist/named-amd/main.js', {
+  'rails-csrf': [
+    'service'
+  ]
+});
+
 // Bootstrap:
 app.import('vendor/bootstrap/dist/css/bootstrap.css');
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
