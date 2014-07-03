@@ -6,11 +6,17 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    render json: Review.create(review)
+    review = Review.new(review_params)
+
+    if review.save
+      render json: Review.create(review)
+    else
+      render json: { errors: review.errors }, status: :unprocessable_entity
+    end
   end
 
   private
-  def review
+  def review_params
     params[:review].permit(:description, :rating, :user, :product_id)
   end
 end
